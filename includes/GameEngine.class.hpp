@@ -6,11 +6,9 @@
 class	GameEngine {
 	public:
 		GameEngine(void);
-		GameEngine(int const width, int const height);
+		GameEngine(int w, int h);
 		~GameEngine(void);
 		void	gameLoop(void);
-		int	_width;
-		int	_height;
 };
 
 #endif

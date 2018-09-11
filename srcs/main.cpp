@@ -1,6 +1,6 @@
 #include "../includes/Header.hpp"
 
-void	checkdimension(std::string width, std::string height)
+/*void	checkdimension(std::string width, std::string height)
 {
 	std::regex	num("^\\d+$");
 
@@ -20,22 +20,25 @@ void	checklib(std::string name)
 	std::regex      libName("(ncurses|sfml|sdl)\\b");
 	if (std::regex_match(name, libName) == false)
 		throw errors::libError();
-}
+}*/
 
 int	main(int argc, char **argv)
 {
-	GameEngine	n;
 	try {
 		if (argc == 4)
 		{
-			checkdimension(argv[1], argv[2]);
-			std::regex	libName("(ncurses|sfml|sdl)\\b");
-			checklib(argv[3]);
+			/*checkdimension(argv[1], argv[2]);
+			checklib(argv[3]);*/
 		}
 		else if (argc == 3)
 		{
-			checkdimension(argv[1], argv[2]);
-			n.gameLoop();
+//			checkdimension(argv[1], argv[2]);
+			everything.mWidth = atoi(argv[1]);
+			everything.mHeight = atoi(argv[2]);
+			std::cout << everything.mWidth << std::endl;
+			std::cout << everything.mHeight << std::endl;
+			//GameEngine	n(e);
+			//n.gameLoop();
 		}
 		else
 		{

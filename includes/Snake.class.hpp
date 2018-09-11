@@ -6,8 +6,9 @@
 class Snake {
 	public:
 		Snake(void);
-		Snake(pair<int, int> k);
+		Snake(int w, int h);
 		~Snake(void);
+		std::vector<std::pair<int, int>>	s;
 };
 
 #endif
