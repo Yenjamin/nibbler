@@ -9,6 +9,9 @@ class	GameEngine {
 		GameEngine(int w, int h);
 		~GameEngine(void);
 		void	gameLoop(void);
+		int	_width;
+		int	_height;
+		std::pair<int, int>	k;
 };
 
 #endif

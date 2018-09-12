@@ -6,15 +6,9 @@ Snake::Snake(void)
 
 Snake::Snake(int w, int h)
 {
-	s.push_back(std::make_pair(w, h));
-	std::cout << s[0].first << std::endl;
-	std::cout << s[0].second << std::endl;
+	s.push_back(std::make_pair(w / 2, h / 2));
 }
 
 Snake::~Snake(void)
 {
 }
-
-/*void	Snake::movesnake(void)
-{
-}*/

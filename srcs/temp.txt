@@ -1,0 +1,48 @@
+#include "../includes/Snake.class.hpp"
+
+Snake::Snake(void)
+{
+}
+
+Snake::Snake(int w, int h)
+{
+	s.push_back(std::make_pair(w / 2, h / 2));
+}
+
+Snake::~Snake(void)
+{
+}
+
+void	addSnake(int w, int h)
+{
+	s.push_back(std::make_pair(w, h));
+}
+
+void	Snake::movesnake(char d)
+{
+	char	t = 'w';
+	if (d == 'a')
+	{
+		if (t != 'd')
+			for (int i = 0; i < s.size(); i++)
+				s[i].first--;
+	}
+	else if (d == 'd')
+	{
+		if (t != 'a')
+			for (int i = 0; i < s.size(); i++)
+				s[i].first++;
+	}
+	else if (d == 'w')
+	{
+		if (t != 's')
+			for (int i = 0; i < s.size(); i++)
+				s[i].second--;
+	}
+	else if (d == 's')
+	{
+		if (t != 'w')
+			for (int i = 0; i < s.size(); i++)
+				s[i].second++;
+	}
+}

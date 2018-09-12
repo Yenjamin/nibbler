@@ -9,6 +9,8 @@ class Snake {
 		Snake(int w, int h);
 		~Snake(void);
 		std::vector<std::pair<int, int>>	s;
+		void	addSnake(int w, int h);
+		void	movesnake(char d);
 };
 
 #endif
