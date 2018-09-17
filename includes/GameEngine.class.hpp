@@ -11,8 +11,8 @@ class	GameEngine {
 		void	gameLoop(void);
 		int	width;
 		int	height;
-		//int	score;
-		//int	time;
+		int	score;
+		int	time;
 		std::vector<std::pair<int, int>>	snake;
 		std::pair<int, int>			food;
 		bool	collision(void);

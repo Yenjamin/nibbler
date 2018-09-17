@@ -6,8 +6,8 @@ GameEngine::GameEngine(void)
 
 GameEngine::GameEngine(int w, int h) : width(w), height(h)
 {
-	//time = 1100000;
-	//score = 0;
+	time = 1100000;
+	score = 0;
 }
 
 GameEngine::~GameEngine(void)
@@ -21,6 +21,9 @@ void	GameEngine::gameLoop(void)
 	Food	f(width, height);
 	while (1)
 	{
+		/*if (time >= 50000)
+			time -= 1000;
+		std::cout << time << std::endl;*/
 		tmp = std::make_pair(0, 0);
 		if (i == 0)
 			break;
@@ -31,8 +34,10 @@ void	GameEngine::gameLoop(void)
 		snake = s.getSnake();
 		if (snake[0] == food)
 		{
+			//score += 10;
 			tmp = snake[snake.size() - 1];
 		}
+		//std::cout << score << std::endl;
 		s.moveSnake('w');
 		if (tmp != std::make_pair(0, 0))
 			s.addSnake(tmp);
@@ -47,7 +52,7 @@ void	GameEngine::gameLoop(void)
 			std::cout << "no!!!!" << std::endl;
 			break;
 		}
-		usleep(1100000);
+		usleep(time);
 	}
 }
 
