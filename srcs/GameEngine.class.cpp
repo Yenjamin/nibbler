@@ -21,9 +21,6 @@ void	GameEngine::gameLoop(void)
 	Food	f(width, height);
 	while (1)
 	{
-		/*if (time >= 50000)
-			time -= 1000;
-		std::cout << time << std::endl;*/
 		tmp = std::make_pair(0, 0);
 		if (i == 0)
 			break;
@@ -34,10 +31,13 @@ void	GameEngine::gameLoop(void)
 		snake = s.getSnake();
 		if (snake[0] == food)
 		{
-			//score += 10;
+			/*score += 10;
+			if ( time >= 50000)
+				time -= 1000;*/
 			tmp = snake[snake.size() - 1];
 		}
 		//std::cout << score << std::endl;
+		//std::cout << time << std::endl;
 		s.moveSnake('w');
 		if (tmp != std::make_pair(0, 0))
 			s.addSnake(tmp);
