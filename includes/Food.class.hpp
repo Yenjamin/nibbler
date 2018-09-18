@@ -12,7 +12,8 @@ class Food {
 		int		fy;
 		int		x;
 		int		y;
-		std::pair<int, int>	foodGenerate(void);
+		std::pair<int, int>	foodGenerate(std::vector< std::pair<int, int> > snake);
+		int		i;
 };
 
 #endif

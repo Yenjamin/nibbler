@@ -37,8 +37,7 @@ int	main(int argc, char **argv)
 			checkdimension(argv[1], argv[2]);
 			w = atoi(argv[1]);
 			h = atoi(argv[2]);
-			std::cout << w << std::endl;
-			std::cout << h << std::endl;
+			std::cout << "size: " << w << ", " << h << std::endl;
 			GameEngine	n(w, h);
 			n.gameLoop();
 		}
